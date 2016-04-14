@@ -13,5 +13,6 @@
 @property (nonatomic, assign) BOOL isForTest;
 - (NSMutableArray *)loadTaskArray;
 - (BOOL)saveTask:(NSMutableDictionary *) task;
+- (void)performHeavySaveOperationForTask:(NSMutableDictionary *)task;
 
 @end

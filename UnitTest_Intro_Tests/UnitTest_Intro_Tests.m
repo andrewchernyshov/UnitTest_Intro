@@ -92,5 +92,15 @@
 }
 // Performance testing
 
-
+- (void)testMeasureOperationPerformance {
+    [self measureBlock:^{
+        
+        self.saveLoadManager = [[SaveLoadManager alloc] init];
+        self.saveLoadManager.isForTest = YES;
+        NSMutableDictionary *task = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Some title", @"title" ,@"Some note", @"note", nil];
+        [self.saveLoadManager performHeavySaveOperationForTask:task];
+        NSMutableDictionary *loadedTask = [[self.saveLoadManager loadTaskArray] firstObject];
+        XCTAssertTrue([[loadedTask objectForKey:@"title"] isEqualToString:@"Some title"]) ;
+    }];
+}
 @end
