@@ -14,7 +14,6 @@
 		E71ABD451CBF75CC002FA3DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E71ABD441CBF75CC002FA3DA /* Assets.xcassets */; };
 		E71ABD481CBF75CC002FA3DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E71ABD461CBF75CC002FA3DA /* LaunchScreen.storyboard */; };
 		E71ABD511CBF7603002FA3DA /* CreateEditNoteController.m in Sources */ = {isa = PBXBuildFile; fileRef = E71ABD501CBF7603002FA3DA /* CreateEditNoteController.m */; };
-		E71ABD541CBF7660002FA3DA /* UserTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E71ABD531CBF7660002FA3DA /* UserTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +29,6 @@
 		E71ABD491CBF75CC002FA3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E71ABD4F1CBF7603002FA3DA /* CreateEditNoteController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateEditNoteController.h; sourceTree = "<group>"; };
 		E71ABD501CBF7603002FA3DA /* CreateEditNoteController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateEditNoteController.m; sourceTree = "<group>"; };
-		E71ABD521CBF7660002FA3DA /* UserTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserTask.h; sourceTree = "<group>"; };
-		E71ABD531CBF7660002FA3DA /* UserTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +67,6 @@
 				E71ABD3F1CBF75CC002FA3DA /* ViewController.m */,
 				E71ABD4F1CBF7603002FA3DA /* CreateEditNoteController.h */,
 				E71ABD501CBF7603002FA3DA /* CreateEditNoteController.m */,
-				E71ABD521CBF7660002FA3DA /* UserTask.h */,
-				E71ABD531CBF7660002FA3DA /* UserTask.m */,
 				E71ABD411CBF75CC002FA3DA /* Main.storyboard */,
 				E71ABD441CBF75CC002FA3DA /* Assets.xcassets */,
 				E71ABD461CBF75CC002FA3DA /* LaunchScreen.storyboard */,
@@ -162,7 +157,6 @@
 				E71ABD401CBF75CC002FA3DA /* ViewController.m in Sources */,
 				E71ABD511CBF7603002FA3DA /* CreateEditNoteController.m in Sources */,
 				E71ABD3D1CBF75CC002FA3DA /* AppDelegate.m in Sources */,
-				E71ABD541CBF7660002FA3DA /* UserTask.m in Sources */,
 				E71ABD3A1CBF75CC002FA3DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +308,7 @@
 				E71ABD4E1CBF75CC002FA3DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
