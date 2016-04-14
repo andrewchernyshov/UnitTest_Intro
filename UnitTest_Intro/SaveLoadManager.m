@@ -17,7 +17,7 @@
 
 @implementation SaveLoadManager
 
-- (NSMutableArray *)loadTaskArray {
+- (NSMutableArray *)taskArray {
     
     if (self.isForTest) {
         if (!_taskArray) {
@@ -30,17 +30,28 @@
         }
         return _taskArray;
     } else {
-    
-    if (!_taskArray) {
         
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"taskArray"]) {
-            _taskArray = [[[NSUserDefaults standardUserDefaults] objectForKey:@"taskArray"] mutableCopy];
-        } else {
-            _taskArray = [[NSMutableArray alloc] init];
+        if (!_taskArray) {
+            
+            if ([[NSUserDefaults standardUserDefaults] objectForKey:@"taskArray"]) {
+                _taskArray = [[[NSUserDefaults standardUserDefaults] objectForKey:@"taskArray"] mutableCopy];
+            } else {
+                _taskArray = [[NSMutableArray alloc] init];
+            }
         }
+        return _taskArray;
     }
-    return _taskArray;
+}
+
+- (NSMutableDictionary *)testStorage {
+    if (!_testStorage) {
+        _testStorage = [[NSMutableDictionary alloc] init];
     }
+    return _testStorage;
+}
+
+- (NSMutableArray *)loadTaskArray {
+    return self.taskArray;
 }
 
 - (BOOL)saveTask:(NSMutableDictionary *) task {
