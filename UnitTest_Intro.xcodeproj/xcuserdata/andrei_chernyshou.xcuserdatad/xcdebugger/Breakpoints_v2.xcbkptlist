@@ -13,5 +13,83 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UnitTest_Intro_Tests/UnitTest_Intro_Tests.m"
+            timestampString = "482351318.368283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-testSaveFunction"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UnitTest_Intro_Tests testSaveFunction]"
+                  moduleName = "UnitTest_Intro_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrei_chernyshou/Desktop/UnitTest_Intro/UnitTest_Intro_Tests/UnitTest_Intro_Tests.m"
+                  timestampString = "482351366.44359"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "903">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UnitTest_Intro_Tests testSaveFunction]"
+                  moduleName = "UnitTest_Intro_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrei_chernyshou/Desktop/UnitTest_Intro/UnitTest_Intro_Tests/UnitTest_Intro_Tests.m"
+                  timestampString = "482351366.443783"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "2430">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UnitTest_Intro_Tests testSaveFunction]"
+                  moduleName = "UnitTest_Intro_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrei_chernyshou/Desktop/UnitTest_Intro/UnitTest_Intro_Tests/UnitTest_Intro_Tests.m"
+                  timestampString = "482351366.444027"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "3097">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UnitTest_Intro_Tests testSaveFunction]"
+                  moduleName = "UnitTest_Intro_Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/andrei_chernyshou/Desktop/UnitTest_Intro/UnitTest_Intro_Tests/UnitTest_Intro_Tests.m"
+                  timestampString = "482351366.444265"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "3219">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

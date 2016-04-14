@@ -10,6 +10,7 @@
 
 @interface SaveLoadManager : NSObject
 
+@property (nonatomic, assign) BOOL isForTest;
 - (NSMutableArray *)loadTaskArray;
 - (BOOL)saveTask:(NSMutableDictionary *) task;
 

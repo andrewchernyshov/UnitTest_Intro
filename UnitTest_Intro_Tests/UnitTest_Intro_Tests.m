@@ -8,7 +8,10 @@
 
 #import <XCTest/XCTest.h>
 #import "ViewController.h"
+#import "SaveLoadManager.h"
 @interface UnitTest_Intro_Tests : XCTestCase
+
+@property (nonatomic, strong) SaveLoadManager *saveLoadManager;
 
 @end
 
@@ -29,5 +32,24 @@
     XCTAssertTrue([viewController.taskArray isKindOfClass:[NSMutableArray class]]);
 }
 
+
+- (void) testSaveManagerFunctionality {
+    
+    SaveLoadManager *saveLoadManager = [[SaveLoadManager alloc] init];
+    saveLoadManager.isForTest = YES;
+    XCTAssertTrue([saveLoadManager loadTaskArray].count == 0);
+    
+}
+
+- (void) testSaveFunction {
+    self.saveLoadManager = [[SaveLoadManager alloc] init];
+    self.saveLoadManager.isForTest = YES;
+    NSMutableDictionary *task = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Some title", @"title" ,@"Some note", @"note", nil];
+    [self.saveLoadManager saveTask:task];
+    XCTAssertNotNil([self.saveLoadManager loadTaskArray]);
+    XCTAssertTrue([self.saveLoadManager loadTaskArray].count);
+    NSMutableDictionary *loadedTask = [[self.saveLoadManager loadTaskArray] firstObject];
+    XCTAssertTrue([[loadedTask objectForKey:@"title"] isEqualToString:@"Some title"]) ;
+}
 
 @end
