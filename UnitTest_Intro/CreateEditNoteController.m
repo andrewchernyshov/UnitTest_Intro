@@ -13,7 +13,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *noteTextField;
 @property (weak, nonatomic) IBOutlet UIButton *deleteNoteButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveNoteButton;
-@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 
 @end
 
