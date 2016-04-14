@@ -52,13 +52,13 @@
     self.saveNoteButton.enabled = NO;
     
     [super viewDidLoad];
-
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-   
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:(@selector(textFieldDidChange:)) name:UITextFieldTextDidChangeNotification object:nil];
     
     if (self.task) {
@@ -67,7 +67,7 @@
         self.deleteNoteButton.enabled = YES;
         
     }
-
+    
 }
 
 - (void)didReceiveMemoryWarning {

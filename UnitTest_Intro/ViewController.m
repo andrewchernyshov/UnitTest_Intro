@@ -8,23 +8,27 @@
 
 #import "ViewController.h"
 #import "CreateEditNoteController.h"
+#import "SaveLoadManager.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *taskTableView;
+@property (nonatomic, strong) SaveLoadManager * saveLoadManager;
 
 @end
 
 @implementation ViewController
 
+- (SaveLoadManager *)saveLoadManager {
+    if (!_saveLoadManager) {
+        _saveLoadManager = [[SaveLoadManager alloc] init];
+    }
+    return _saveLoadManager;
+}
+
 - (NSMutableArray *)taskArray {
     if (!_taskArray) {
-        
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"taskArray"]) {
-            _taskArray = [[[NSUserDefaults standardUserDefaults] objectForKey:@"taskArray"] mutableCopy];
-        } else {
-            _taskArray = [[NSMutableArray alloc] init];
-        }
+        _taskArray = [self.saveLoadManager loadTaskArray];
     }
     return _taskArray;
 }
@@ -44,19 +48,13 @@
     CreateEditNoteController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EditVC"];
     [self presentViewController:vc animated:YES completion:nil];
     __weak typeof(self) weakSelf = self;
-
+    
     vc.saveTaskBlock = ^(NSMutableDictionary *task){
         
-        if (![task objectForKey:@"Id"]) {
-            [weakSelf.taskArray addObject:task];
-        } else {
-            
-            [weakSelf.taskArray replaceObjectAtIndex:[[task objectForKey:@"Id"] intValue] withObject:task];
-        }
-        [[NSUserDefaults standardUserDefaults] setObject:weakSelf.taskArray forKey:@"taskArray"];
+        [weakSelf.saveLoadManager saveTask:task];
         [weakSelf.taskTableView reloadData];
     };
-
+    
 }
 
 
@@ -79,7 +77,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (self.taskArray [indexPath.row]) {
-    
+        
         CreateEditNoteController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"EditVC"];
         [self presentViewController:vc animated:YES completion:nil];
         
@@ -89,20 +87,10 @@
         [currentTask setObject:[NSNumber numberWithLong:indexPath.row] forKey:@"Id"];
         vc.task = currentTask;
         
-         __weak typeof(self) weakSelf = self;
+        __weak typeof(self) weakSelf = self;
         vc.saveTaskBlock = ^(NSMutableDictionary *task){
             
-            if (![task objectForKey:@"Id"]) {
-                [weakSelf.taskArray addObject:task];
-            } else if((![task objectForKey:@"title"] && ![task objectForKey:@"title"]) || ([[task objectForKey:@"title"] isEqualToString:@""] && [[task objectForKey:@"note"] isEqualToString:@""])){
-                
-                [weakSelf.taskArray removeObjectAtIndex:[[task valueForKey:@"Id"] integerValue]];
-                
-            } else {
-                
-                [weakSelf.taskArray replaceObjectAtIndex:[[task objectForKey:@"Id"] intValue] withObject:task];
-            }
-            [[NSUserDefaults standardUserDefaults] setObject:weakSelf.taskArray forKey:@"taskArray"];
+            [weakSelf.saveLoadManager saveTask:task];
             [weakSelf.taskTableView reloadData];
         };
     }
