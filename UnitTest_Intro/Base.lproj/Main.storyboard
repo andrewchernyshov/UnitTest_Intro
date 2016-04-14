@@ -111,12 +111,18 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usG-9y-Acf">
-                                <rect key="frame" x="21" y="159" width="79" height="30"/>
+                                <rect key="frame" x="16" y="159" width="79" height="30"/>
                                 <state key="normal" title="Delete note"/>
+                                <connections>
+                                    <action selector="deleteNoteButtonPressed:" destination="Ob9-LF-xBp" eventType="touchUpInside" id="tr8-EE-bsw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e2V-LY-owx">
-                                <rect key="frame" x="241" y="159" width="68" height="30"/>
+                                <rect key="frame" x="236" y="159" width="68" height="30"/>
                                 <state key="normal" title="Save note"/>
+                                <connections>
+                                    <action selector="saveNoteButtonPressed:" destination="Ob9-LF-xBp" eventType="touchUpInside" id="xbB-O4-fNq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,18 +131,24 @@
                             <constraint firstItem="aaq-7h-Jt7" firstAttribute="leading" secondItem="dvC-zX-mqE" secondAttribute="leadingMargin" id="4Fg-gq-vih"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aaq-7h-Jt7" secondAttribute="trailing" id="HLF-Em-lrS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tg9-UR-KfO" secondAttribute="trailing" constant="-20" id="MBE-Ct-67U"/>
+                            <constraint firstItem="usG-9y-Acf" firstAttribute="leading" secondItem="dvC-zX-mqE" secondAttribute="leadingMargin" id="MRP-pw-ran"/>
                             <constraint firstItem="DtR-IX-Jt8" firstAttribute="top" secondItem="aaq-7h-Jt7" secondAttribute="bottom" constant="10" id="Po0-g5-1fJ"/>
                             <constraint firstItem="DtR-IX-Jt8" firstAttribute="leading" secondItem="dvC-zX-mqE" secondAttribute="leadingMargin" id="Qo9-Ek-9ih"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DtR-IX-Jt8" secondAttribute="trailing" id="USy-ji-b9v"/>
                             <constraint firstItem="aaq-7h-Jt7" firstAttribute="top" secondItem="Tg9-UR-KfO" secondAttribute="bottom" constant="10" id="W3S-Kh-8BQ"/>
                             <constraint firstItem="Tg9-UR-KfO" firstAttribute="leading" secondItem="dvC-zX-mqE" secondAttribute="leadingMargin" constant="-20" id="gsa-K0-c1Q"/>
-                            <constraint firstItem="e2V-LY-owx" firstAttribute="trailing" secondItem="dvC-zX-mqE" secondAttribute="trailingMargin" constant="5" id="lMj-cq-8BV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e2V-LY-owx" secondAttribute="trailing" id="pGG-RI-01O"/>
                             <constraint firstItem="e2V-LY-owx" firstAttribute="top" secondItem="DtR-IX-Jt8" secondAttribute="bottom" constant="15" id="qnq-EJ-702"/>
                             <constraint firstItem="usG-9y-Acf" firstAttribute="top" secondItem="DtR-IX-Jt8" secondAttribute="bottom" constant="15" id="sJW-Ac-aig"/>
-                            <constraint firstItem="usG-9y-Acf" firstAttribute="leading" secondItem="dvC-zX-mqE" secondAttribute="leadingMargin" constant="5" id="vef-SD-ZId"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="deleteNoteButton" destination="usG-9y-Acf" id="xPn-u1-d3q"/>
+                        <outlet property="noteTextField" destination="DtR-IX-Jt8" id="qWb-qq-T2Z"/>
+                        <outlet property="saveNoteButton" destination="e2V-LY-owx" id="aba-mR-xI8"/>
+                        <outlet property="titleTextField" destination="aaq-7h-Jt7" id="w5a-Ne-h9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="21w-N0-uZ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

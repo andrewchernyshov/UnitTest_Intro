@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^SaveBlock)(NSMutableDictionary *);
+
 @interface CreateEditNoteController : UIViewController
+
+@property (nonatomic, strong) NSMutableDictionary *task;
+@property (nonatomic, copy) SaveBlock saveTaskBlock;
 
 @end
