@@ -11,6 +11,8 @@
 @interface SaveLoadManager : NSObject
 
 @property (nonatomic, assign) BOOL isForTest;
+@property (nonatomic, strong) NSUserDefaults *storage;
+
 - (NSMutableArray *)loadTaskArray;
 - (BOOL)saveTask:(NSMutableDictionary *) task;
 - (void)performHeavySaveOperationForTask:(NSMutableDictionary *)task;
