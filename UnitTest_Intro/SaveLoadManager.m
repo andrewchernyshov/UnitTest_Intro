@@ -17,6 +17,13 @@
 
 @implementation SaveLoadManager
 
+- (NSUserDefaults *)_storage {
+    if (!_storage) {
+        _storage = [NSUserDefaults standardUserDefaults];
+    }
+    return _storage;
+}
+
 - (NSMutableArray *)taskArray {
     
     if (self.isForTest) {
@@ -33,8 +40,8 @@
         
         if (!_taskArray) {
             
-            if ([[NSUserDefaults standardUserDefaults] objectForKey:@"taskArray"]) {
-                _taskArray = [[[NSUserDefaults standardUserDefaults] objectForKey:@"taskArray"] mutableCopy];
+            if ([self.storage objectForKey:@"taskArray"]) {
+                _taskArray = [[self.storage objectForKey:@"taskArray"] mutableCopy];
             } else {
                 _taskArray = [[NSMutableArray alloc] init];
             }
@@ -69,7 +76,7 @@
     if (self.isForTest) {
         [self.testStorage setObject:self.taskArray forKey:@"taskArray"];
     } else {
-        [[NSUserDefaults standardUserDefaults] setObject:self.taskArray forKey:@"taskArray"];
+        [self.storage setObject:self.taskArray forKey:@"taskArray"];
     }
     return YES;
 }

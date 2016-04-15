@@ -15,10 +15,16 @@ describe(@"Saving to the NSUserDefaults", ^{
     
     it(@"Should save task to NSUserDefaults", ^{
         
-        NSMutableDictionary *taskMoc = [NSMutableDictionary mock];
-        [[taskMoc should] beMemberOfClass:[NSMutableDictionary class]];
-        []
+        SaveLoadManager *manager = [[SaveLoadManager alloc] init];
+        NSMutableDictionary *task = [[NSMutableDictionary alloc] initWithObjectsAndKeys:@"Some title", @"title", nil];
+        NSUserDefaults *defaultsMOC = [NSUserDefaults mock];
+        [[defaultsMOC should] beKindOfClass:[NSUserDefaults class]];
+        [[defaultsMOC should] receive:@selector(setObject:forKey:)];
+        [[defaultsMOC should] receive:@selector(objectForKey:) andReturn:@[task]];
+        manager.storage = defaultsMOC;
         
+        //[manager saveTask:task];
+        [[[manager loadTaskArray] should] equal:@[task]];
     });
     
     

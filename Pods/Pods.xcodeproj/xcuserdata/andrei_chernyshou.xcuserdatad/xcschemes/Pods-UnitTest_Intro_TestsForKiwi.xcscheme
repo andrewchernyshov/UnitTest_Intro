@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E71ABD341CBF75CC002FA3DA"
-               BuildableName = "UnitTest_Intro.app"
-               BlueprintName = "UnitTest_Intro"
-               ReferencedContainer = "container:UnitTest_Intro.xcodeproj">
+               BlueprintIdentifier = "296170C3D67737B4145EE785A5BB8319"
+               BuildableName = "libPods-UnitTest_Intro_TestsForKiwi.a"
+               BlueprintName = "Pods-UnitTest_Intro_TestsForKiwi"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EB01DDCB1CC03A9800EC4F7D"
-               BuildableName = "UnitTest_Intro_TestsForKiwi.xctest"
-               BlueprintName = "UnitTest_Intro_TestsForKiwi"
-               ReferencedContainer = "container:UnitTest_Intro.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E71ABD341CBF75CC002FA3DA"
-            BuildableName = "UnitTest_Intro.app"
-            BlueprintName = "UnitTest_Intro"
-            ReferencedContainer = "container:UnitTest_Intro.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E71ABD341CBF75CC002FA3DA"
-            BuildableName = "UnitTest_Intro.app"
-            BlueprintName = "UnitTest_Intro"
-            ReferencedContainer = "container:UnitTest_Intro.xcodeproj">
+            BlueprintIdentifier = "296170C3D67737B4145EE785A5BB8319"
+            BuildableName = "libPods-UnitTest_Intro_TestsForKiwi.a"
+            BlueprintName = "Pods-UnitTest_Intro_TestsForKiwi"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E71ABD341CBF75CC002FA3DA"
-            BuildableName = "UnitTest_Intro.app"
-            BlueprintName = "UnitTest_Intro"
-            ReferencedContainer = "container:UnitTest_Intro.xcodeproj">
+            BlueprintIdentifier = "296170C3D67737B4145EE785A5BB8319"
+            BuildableName = "libPods-UnitTest_Intro_TestsForKiwi.a"
+            BlueprintName = "Pods-UnitTest_Intro_TestsForKiwi"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
